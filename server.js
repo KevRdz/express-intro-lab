@@ -2,6 +2,8 @@
 
 import express from 'express'
 
+import { students } from './data/students-data.js'
+
 // Create Express app
 
 const app = express()
@@ -22,6 +24,10 @@ app.get('/', function(req, res){
 
 app.get('/home',function(req, res){
   res.render('home')
+})
+
+app.get('/students', function (req, res){
+  res.render('students/index')
 })
 
 // Tell the app to listen on port 3000
